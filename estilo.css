@@ -1,0 +1,69 @@
+
+body {
+  background: #3f84d7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #f7f7f7;
+}
+
+.ano {
+  color: #111;
+}
+
+.sexo {
+  color: #111;
+}
+
+.container_2 {
+  margin-top: 20px;
+}
+
+.botao {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background: #ccc;
+  border-radius: 4px;
+  text-transform: lowercase;
+  letter-spacing: 0.056rem;
+  display: block;
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 4px;
+  border: transparent;
+}
+
+p {
+  margin: 0px;
+  background: #103;
+  padding: 5px;
+  width: 390px;
+  color: #caf;
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.foto_alinhar {
+  display: flex;
+  justify-content: center;
+}
+
+#res {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}

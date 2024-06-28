@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador</title>
+  <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+  <h1>Verificador De Idade</h1>
+  <div class="container">
+    <span class="ano">Ano de Nascimento:</span>
+    <input type="number" name="ano" id="txt_1">
+
+    <div class="container_2">
+      <span class="sexo">Sexo:</span>
+      <input type="radio" name="sexo" id="sex_1"> <span>Masculino</span>
+      <input type="radio" name="sexo" id="sex_2"> <span>Feminino</span>
+    </div>
+
+    <input class="botao" type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res"></div>
+    <div class="foto_alinhar">
+      <img id="foto" src="" alt="">
+    </div>
+
+    <p id="paragrafo">preencha os dados acima para ver os resultado!</p>
+
+    <script>
+      function verificar() {
+          ano_nascimento = document.getElementById('txt_1')
+          sexo_masculino = document.querySelector('#sex_1')
+          sexo_feminino = document.querySelector('#sex_2')
+          foto_f = document.getElementById('foto')
+          p = document.getElementById('paragrafo')
+          
+          var atual = new Date().getFullYear() // pegando o ano atual
+          var idade = Number(ano_nascimento.value)
+
+          var nova = atual - idade
+          var sexoselect 
+          var sexofeminino
+          if (sexo_masculino.checked) {
+            sexoselect = 'Masculino'
+          }else if (sexo_feminino.checked) {
+            sexoselect = 'Feminino'
+          }
+
+          if (nova <= 30 && sexoselect === 'Masculino') {
+            res.innerHTML = `Detectamos um homem de ${nova} ano(s)`
+            foto_f.src = './homem24.png'
+            p.style.display = 'none'
+
+          }else if (nova <= 26 && sexoselect === 'Feminino') {
+            res.innerHTML = `Detectamos uma mulher de ${nova} ano(s)`
+            foto_f.src = './mulher19.png'
+            p.style.display = 'none'
+            
+          }else if (nova >= 70 && sexoselect === 'Feminino') {
+            res.innerHTML = `Detectamos uma senhora de ${nova} ano(s)`
+            foto_f.src = './senhora.png'
+            p.style.display = 'none'
+          }
+
+          
+      }
+    </script>
+  </div>
+</body>
+
+</html>
