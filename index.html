@@ -63,7 +63,7 @@
             res.innerHTML = `Detectamos uma senhora de ${nova} ano(s)`
             foto_f.src = './senhora.png'
             p.style.display = 'none'
-          }else if (nova > 200) {
+          }else if (nova > 200 && sexoselect === 'Feminino' || sexoselect === 'Masculino'){
             res.innerHTML = `usuário não identificado`
           }
       }
